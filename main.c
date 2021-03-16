@@ -11,12 +11,13 @@ int main(void)
 {
 	char *t = "exitosa";
 	char c = 'g';
+	int a;
 
-	_printf("primera prueba:[%s]", t);
-	printf("\n");
-	_printf("primera prueba:[%c]", c);
-	printf("\n");
-	_printf("primera prueba:[%%]");
-	printf("\n");
+	a = _printf("primera prueba:\n");
+	printf("%d\n", a);
+	a = printf("primera prueba:\n");
+	printf("%d\n", a);
+
+	
 	return (0);
 }

@@ -13,11 +13,13 @@ int _printf(const char *format, ...)
 	_print print_any[] = {
 		{"c", print_c},
 		{"s", print_s},
+		{"n", print_n}
 		{00, 00}
 	};
 	va_list arguments;
 	unsigned int x = 0, i = 0;
 	unsigned int count = 0;
+	char *espa = "\n";
 
 	va_start(arguments, format);
 	while (format && format[x])
@@ -47,6 +49,7 @@ int _printf(const char *format, ...)
 		}
 		x++;
 	}
+	write(1, espa, 2);
 	va_end(arguments);
 	return (count);
 }
