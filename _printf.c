@@ -13,6 +13,8 @@ int _printf(const char *format, ...)
 	_print print_any[] = {
 		{"c", print_c},
 		{"s", print_s},
+		{"d", print_i},
+		{"i", print_i},
 		{00, 00}
 	};
 	va_list arguments;
@@ -50,5 +52,3 @@ int _printf(const char *format, ...)
 	va_end(arguments);
 	return (count);
 }
-
-
