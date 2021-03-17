@@ -19,12 +19,40 @@ int _printf(const char *format, ...)
 	};
 	va_list arguments;
 	unsigned int x = 0, i = 0;
-	unsigned int count = 0;
+	unsigned int count = 0, count2 = 0;
 
 	va_start(arguments, format);
+	if (format == 00)
+	{
+		return (-1);
+	}
+
 	while (format && format[x])
 	{
-	
+		if (format[x] == '%' && format[x + 1] == '%')
+		{
+			x += 2;
+		}
+		if (format[x] == '%' && format[x + 1] != 00)
+		{
+		i = 0;
+		count2 = 0;
+		while (print_any[i].dt)
+		{
+			if (*print_any[i].dt == format[x + 1])
+			{
+				count2++;
+			}
+			i++;
+		}
+		if (count2 == 0)
+		exit(-1);
+		x++;
+		}
+		x++;
+	}
+	while (count2 != 0 && format && format[x])
+	{
 		if (format[x] != '%')
 		{
 			write(1, (format + x), 1);

@@ -23,6 +23,7 @@ int print_c(va_list arguments);
 int _printf(const char *format, ...);
 int _putchar(char c);
 int print_i(va_list m);
+int get_fun(const char *format, va_list arguments);
 
 
 
