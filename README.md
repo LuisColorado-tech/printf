@@ -1,4 +1,4 @@
-_# _printf_
+## _printf
 
 _printf converts, formats, and prints its arguments on the standard output
 
@@ -61,36 +61,39 @@ _To get _printf() working in your project, download and add the aforementioned f
 
 
 #### Use & Examples
-
+```
 ** Prototype:** int _printf(const char *format, ...);
+```
 
 
-
-**How to use it:** _printf() follows the following structure when called in a program
-
+**How to use it:** 
+```
+_printf() follows the following structure when called in a program
+```
+```
 _printf("string to be printed %format_specifiers", argument 1, argument 2....argument n);
-
+```
 
 
 **Format Specifiers**
 
 
 
-Identifier - Format -   Use  -   Example
+Identifier - Format -     Use  -         Example
 
-       Specifier
+            Specifier
 
- %      c    Single Character  A, B, a, b.
+    %          c       Single Character  A, B, a, b.
 
- %      s    A string      Hello world
+    %          s       A string         Hello world
 
- %      i     An Integer    1, 2, 3098, 746383
+    %          i       An Integer       1, 2, 3098, 746383
 
- %      d      An integer    1, 2, 3098, 746383
+    %          d       An integer       1, 2, 3098, 746383
 
- %      %     A percentage (%)         %
+    %          %       A percentage(%)         %
 
-             symbol
+                           symbol
 
 
 
@@ -98,38 +101,38 @@ Identifier - Format -   Use  -   Example
 
 
 
-    **Input**     **Output**
+    **Input**                           **Output**
 
 
 
 if variable 't' is string type and stores "World"
-
-_printf("Hello %s," t);   Hello World
-
+```
+_printf("Hello %s," t);                 Hello World
+```
 
 
 if variable 't' stores a char 'Z'
-
-_printf("Hello %c," t);   Hello Z
-
-
-
-if variable 't' is int type and stores 1200
-
-_printf("Hello %i," t);    Hello 1200
-
+```
+_printf("Hello %c," t);                 Hello Z
+```
 
 
 if variable 't' is int type and stores 1200
+```
+_printf("Hello %i," t);                 Hello 1200
+```
 
-_printf("Hello %d," t);   Hello 1200
 
+if variable 't' is int type and stores 1200
+```
+_printf("Hello %d," t);                 Hello 1200
+```
 
 
 printing a percentage (%) symbol
-
-_printf("Hello %%");     Hello %
-
+```
+_printf("Hello %%");                    Hello %
+```
 
 
 **More examples: Using several format specifiers on the same string**
@@ -151,10 +154,9 @@ if variable 'm' is int type and stores 72000
 and printing a percentage (%) symbol
 
 
-
+```
 _printf("Hello %s, a letter: %c, completed: 40%%, minutes to go: %i, seconds to go: %d.", t, a, n, m);
-
-
+```
 
 *Output**
 
