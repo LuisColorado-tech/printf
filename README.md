@@ -100,9 +100,9 @@ Identifier - Format -     Use  -         Example
 **Examples:**
 
 
-
-    **Input**                           **Output**
-
+```
+    **Input**                          **Output**
+```
 
 
 if variable 't' is string type and stores "World"
